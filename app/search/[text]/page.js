@@ -48,9 +48,10 @@ const page = ({params}) => {
             <p className=' text-left mb-10'>You Are Searched for {text}</p>
 
             {console.log(sdata)}
+            {/* sdata==[0].length */}
             
 
-            {sdata==[0].length ? <h1 className='flex justify-center text-5xl font-bold'>Not Found</h1>
+            {[0].length=== 0 ? <h1 className='flex justify-center text-5xl font-bold'>Not Found</h1>
 
              :<><section className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-20 gap-10'>
              { sdata && sdata.slice(0,value).map((item)=>{

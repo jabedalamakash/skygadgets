@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 const page = ({params}) => {
@@ -32,8 +33,10 @@ const page = ({params}) => {
         <>
 
         {/* {console.log(data)} */}
-
-            <section className='w-full sm:w-[50%] grid place-content-center my-20 mx-auto px-5 sm:px-0 '>
+            <div className=' w-full sm:w-[80%] my-20  mx-auto px-5 sm:px-0 '>
+            
+             <Link href="/"><button className='bg-blue-500 px-10 rounded-md py-5 text-white'>Back</button></Link> 
+            <section className='w-full sm:w-[50%] mx-auto my-20  grid place-content-center '>
 
             <Image
             src={data.image}
@@ -64,6 +67,7 @@ const page = ({params}) => {
 
                      
         </section>
+        </div>
         </>
     );
 };

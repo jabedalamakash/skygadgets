@@ -1,5 +1,6 @@
 "use client"
 import Phone from '@/app/components/Phone';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 const page = ({params}) => {
@@ -41,7 +42,10 @@ const page = ({params}) => {
     return (
         <> 
         <div className='sm:w-[80%] w-full mx-auto my-20 px-5 sm:px-0'>
-            <p className=' text-left mb-20'>You Are Searched for {text}</p>
+            {/* <p className=' text-left mb-10'>You Are Searched for {text}</p> */}
+            
+            <Link href="/"><button className='bg-blue-500 px-10 rounded-md py-5 mb-10 text-white'>Back</button></Link> 
+            <p className=' text-left mb-10'>You Are Searched for {text}</p>
             {/* {sdata<1?<h1>Not found</h1>:null} */}
             {/* status":false */}
             {console.log(sdata)}
@@ -59,18 +63,6 @@ const page = ({params}) => {
              <button onClick={handleClick} className='bg-blue-500 font-bold rounded-md text-center text-white px-10 py-5'>Show All</button>
              </div>} 
              </>}
-
-            {/* <section className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-20 gap-10'>
-                { sdata && sdata.slice(0,value).map((item)=>{
-                return  <Phone key={item.phone_name} data={item}/>
-                })}
-                
-                
-            </section>
-            {!show? null
-                :<div className='flex justify-center'>
-                <button onClick={handleClick} className='bg-blue-500 font-bold rounded-md text-center text-white px-10 py-5'>Show All</button>
-                </div>}  */}
 
 
             </div>
